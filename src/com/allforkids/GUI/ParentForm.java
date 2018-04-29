@@ -6,7 +6,9 @@
 package com.allforkids.GUI;
 
 import static com.allforkids.Services.LoginService.currentUser;
+import com.codename1.components.InfiniteProgress;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
@@ -37,6 +39,12 @@ public class ParentForm {
         tb.addComponentToSideMenu(topBar);
 
         tb.addMaterialCommandToSideMenu("Etablissement", FontImage.MATERIAL_HOME, e -> {
+
+            EtablissementForm etablissementForm = new EtablissementForm();
+            etablissementForm.getEtablissementForm().show();
+            
+        });
+         tb.addMaterialCommandToSideMenu("Mes favoris", FontImage.MATERIAL_MOOD, e -> {
         });
         tb.addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_WEB, e -> {
         });
