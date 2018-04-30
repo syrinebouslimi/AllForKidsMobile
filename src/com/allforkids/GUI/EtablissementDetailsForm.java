@@ -6,6 +6,7 @@
 package com.allforkids.GUI;
 
 import com.allforkids.Entities.Etablissement;
+import com.allforkids.Services.FavorisService;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.Display;
@@ -20,6 +21,7 @@ import com.codename1.ui.Toolbar;
 import com.codename1.ui.URLImage;
 import com.codename1.ui.geom.Dimension;
 import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
@@ -70,13 +72,26 @@ public class EtablissementDetailsForm {
         detail.add(tphone);
         detail.add(lbadr);
         detail.add(tadr);
-        detail.add(createStarRankSlider());
+        //detail.add(createStarRankSlider());
+       /* Container starSelect = new Container(new BoxLayout(BoxLayout.X_AXIS));
+        for (int iter = 0; iter < 5; iter++) {
+            createStarButton(starSelect);
+        }*/
+        
+       // detail.add(starSelect);
+       detail.add(FlowLayout.encloseCenter(createStarRankSlider()));
+        
+        
+        
 
         detail.getToolbar().addCommandToOverflowMenu("Ajouter aux favoris", icon, ev -> {
+            FavorisService favorisService = new FavorisService();
+            favorisService.ajouterFavorisApi(e);
 
         });
 
     }
+
 
     public Form getDetail() {
         return detail;
@@ -87,13 +102,13 @@ public class EtablissementDetailsForm {
     }
 
     private void initStarRankStyle(Style s, Image star) {
-        s.setBackgroundType(Style.BACKGROUND_IMAGE_TILE_BOTH);
-        s.setBorder(Border.createEmpty());
-        s.setBgImage(star);
-        s.setBgTransparency(0);
-    }
+    s.setBackgroundType(Style.BACKGROUND_IMAGE_TILE_BOTH);
+    s.setBorder(Border.createEmpty());
+    s.setBgImage(star);
+    s.setBgTransparency(0);
+}
 
-    private Slider createStarRankSlider() {
+  private Slider createStarRankSlider() {
     Slider starRank = new Slider();
     starRank.setEditable(true);
     starRank.setMinValue(0);
@@ -111,8 +126,6 @@ public class EtablissementDetailsForm {
     initStarRankStyle(starRank.getSliderFullUnselectedStyle(), fullStar);
     starRank.setPreferredSize(new Dimension(fullStar.getWidth() * 5, fullStar.getHeight()));
     return starRank;
-    
- 
-    }
+}
 
 }

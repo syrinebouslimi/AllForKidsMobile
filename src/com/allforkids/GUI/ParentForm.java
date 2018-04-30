@@ -45,15 +45,21 @@ public class ParentForm {
             
         });
          tb.addMaterialCommandToSideMenu("Mes favoris", FontImage.MATERIAL_MOOD, e -> {
+             FavorisForm favorisForm = new FavorisForm();
+            favorisForm.getFavorisForm().show();
         });
         tb.addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_WEB, e -> {
         });
         tb.addMaterialCommandToSideMenu("Se deconnecter", FontImage.MATERIAL_SETTINGS, e -> {
+            currentUser = null;
+            LoginForm loginForm = new LoginForm();
+            loginForm.getLoginForm().showBack();
         });
 
     }
 
     public Form getParentForm() {
+        
         return parentForm;
     }
 
