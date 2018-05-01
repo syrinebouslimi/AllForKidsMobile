@@ -49,6 +49,8 @@ public class ParentForm {
             favorisForm.getFavorisForm().show();
         });
         tb.addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_WEB, e -> {
+             ReclamationForm reclamationForm = new ReclamationForm();
+            reclamationForm.getReclamationForm().show();
         });
         tb.addMaterialCommandToSideMenu("Se deconnecter", FontImage.MATERIAL_SETTINGS, e -> {
             currentUser = null;

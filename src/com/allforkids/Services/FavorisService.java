@@ -63,9 +63,7 @@ public class FavorisService {
 
             List<Map<String, Object>> list = (List<Map<String, Object>>) etudiants.get("root");
             ArrayList<Map<String, String>> myList = (ArrayList<Map<String,String>>)etudiants.get("etablissement");
-               
-                
-                
+                              
 
             for (Map<String, Object> obj : list) {
                 Favoris f = new Favoris();
