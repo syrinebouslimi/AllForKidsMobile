@@ -6,8 +6,6 @@
 package com.allforkids.GUI;
 
 import com.allforkids.Entities.Favoris;
-import com.allforkids.Entities.Etablissement;
-import com.allforkids.Services.EtablissementService;
 import com.allforkids.Services.FavorisService;
 import static com.allforkids.Services.LoginService.currentUser;
 import com.codename1.components.ImageViewer;
@@ -24,7 +22,6 @@ import com.codename1.ui.Toolbar;
 import com.codename1.ui.URLImage;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;

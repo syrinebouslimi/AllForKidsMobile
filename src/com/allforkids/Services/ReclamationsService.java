@@ -63,8 +63,7 @@ public class ReclamationsService {
 
         } catch (IOException ex) {
         }
-        System.out.println("listt" + listReclamation);
-        System.out.println("ddd " +listReclamation);
+   
         return listReclamation;
 
     }
