@@ -38,6 +38,9 @@ public class AdminForm {
         tb.addComponentToSideMenu(topBar);
 
         tb.addMaterialCommandToSideMenu("Notifications", FontImage.MATERIAL_HOME, e -> {
+            NotificationForm notifForm = new NotificationForm();
+            notifForm.getNotiForm().show();
+            
             
             
         });
