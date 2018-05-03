@@ -40,8 +40,8 @@ public class MyApplication {
         LoginForm loginForm = new LoginForm();
         loginForm.getLoginForm().show();
         
-        /*ChartsForm charts = new ChartsForm();
-        charts.getF().show();*/
+      //  ChartsForm charts = new ChartsForm();
+     
 
     }
 

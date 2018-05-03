@@ -21,8 +21,9 @@ import com.codename1.ui.util.Resources;
  * @author Syrine
  */
 public class AdminForm {
+
     Form adminForm;
-    
+
     private Resources theme;
 
     public AdminForm() {
@@ -36,11 +37,19 @@ public class AdminForm {
         topBar.setUIID("SideCommand");
         tb.addComponentToSideMenu(topBar);
 
-        tb.addMaterialCommandToSideMenu("Etablissement", FontImage.MATERIAL_HOME, e -> {
+        tb.addMaterialCommandToSideMenu("Notifications", FontImage.MATERIAL_HOME, e -> {
+            
+            
         });
         tb.addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_WEB, e -> {
         });
-        tb.addMaterialCommandToSideMenu("Enseignants", FontImage.MATERIAL_SETTINGS, e -> {
+        tb.addMaterialCommandToSideMenu("Demande d'ajout d'etablissement", FontImage.MATERIAL_SETTINGS, e -> {
+        });
+        tb.addMaterialCommandToSideMenu("Statisqtiques", FontImage.MATERIAL_SETTINGS, e -> {
+        });
+        tb.addMaterialCommandToSideMenu("Se déconnecter", FontImage.MATERIAL_SETTINGS, e -> {
+            LoginForm loginForm = new LoginForm();
+            loginForm.getLoginForm().showBack();
         });
 
     }
@@ -52,6 +61,5 @@ public class AdminForm {
     public void setAdminForm(Form adminForm) {
         this.adminForm = adminForm;
     }
-    
-    
+
 }
