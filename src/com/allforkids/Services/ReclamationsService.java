@@ -46,7 +46,7 @@ public class ReclamationsService {
 
                 Map<String, Object> data = (Map<String, Object>) obj.get("createdAt");
 
-                String timestamp = data.get("timestamp").toString();
+             /*   String timestamp = data.get("timestamp").toString();
                 String beforeComma = timestamp.substring(0, timestamp.indexOf("."));
                 String afterComma = timestamp.substring(timestamp.indexOf(".") + 1, timestamp.length());
                 SimpleDateFormat sfd = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -55,7 +55,7 @@ public class ReclamationsService {
                  Calendar cal = Calendar.getInstance();
                 cal.setTime(dt);
                 cal.add(Calendar.HOUR_OF_DAY, -1);
-                r.setCreatedAt(cal.getTime().toString());
+                r.setCreatedAt(cal.getTime().toString());*/
                 
                 listReclamation.add(r);
 

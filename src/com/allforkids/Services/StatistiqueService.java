@@ -5,18 +5,9 @@
  */
 package com.allforkids.Services;
 
-import com.allforkids.Entities.Etablissement;
-import com.allforkids.Entities.Favoris;
 import com.allforkids.Entities.Statistique;
-import com.allforkids.GUI.FavorisForm;
-import static com.allforkids.Services.LoginService.currentUser;
 import com.codename1.io.CharArrayReader;
-import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
-import com.codename1.io.NetworkEvent;
-import com.codename1.io.NetworkManager;
-import com.codename1.ui.Dialog;
-import com.codename1.ui.events.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
