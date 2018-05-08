@@ -38,14 +38,21 @@ public class AdminForm {
         tb.addComponentToSideMenu(topBar);
 
         tb.addMaterialCommandToSideMenu("Notifications", FontImage.MATERIAL_HOME, e -> {
+            NotificationForm notifForm = new NotificationForm();
+            notifForm.getNotiForm().show();
+            
             
             
         });
         tb.addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_WEB, e -> {
+               ReclamationForm reclamationForm = new ReclamationForm();
+            reclamationForm.getReclamationForm().show();
         });
         tb.addMaterialCommandToSideMenu("Demande d'ajout d'etablissement", FontImage.MATERIAL_SETTINGS, e -> {
         });
-        tb.addMaterialCommandToSideMenu("Statisqtiques", FontImage.MATERIAL_SETTINGS, e -> {
+        tb.addMaterialCommandToSideMenu("Statistiques", FontImage.MATERIAL_SETTINGS, e -> {
+            ChartsForm chartsForm = new ChartsForm();
+            chartsForm.createPieChartForm();
         });
         tb.addMaterialCommandToSideMenu("Se déconnecter", FontImage.MATERIAL_SETTINGS, e -> {
             LoginForm loginForm = new LoginForm();

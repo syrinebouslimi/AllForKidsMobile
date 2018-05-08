@@ -34,22 +34,7 @@ public class MessagesService {
 
                 String id = obj.get("id").toString();
                 m.setId(id);
-                
-              /*  String timestamp = obj.get("timestamp").toString();
-                System.out.println("aaaa " +timestamp);
-             
-                String beforeComma = timestamp.substring(0, timestamp.indexOf("."));
-                String afterComma = timestamp.substring(timestamp.indexOf(".") + 1, timestamp.length());
-                SimpleDateFormat sfd = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-                if (afterComma.length()<=9){
-                
-                long batch_date = Long.parseLong(beforeComma + afterComma.substring(0, 9));
-                Date dt = new Date(batch_date * 1000);
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(dt);
-                cal.add(Calendar.HOUR_OF_DAY, -1);
-                m.setDateEnvoi(cal.getTime().toString()); */
-
+           
                 String body = obj.get("body").toString();
                 m.setBody(body);
 

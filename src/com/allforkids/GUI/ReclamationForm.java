@@ -7,6 +7,8 @@ package com.allforkids.GUI;
 
 import com.allforkids.Entities.Etablissement;
 import com.allforkids.Entities.Reclamation;
+import com.allforkids.Services.LoginService;
+import static com.allforkids.Services.LoginService.currentUser;
 import com.allforkids.Services.ReclamationsService;
 import com.codename1.components.ImageViewer;
 import com.codename1.io.ConnectionRequest;
@@ -43,7 +45,7 @@ public class ReclamationForm {
   
 
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://localhost/allforkid/allforkids/web/app_dev.php/allUserReclamations/8");
+        con.setUrl("http://localhost/allforkid/allforkids/web/app_dev.php/allUserReclamations/"+currentUser.getId().substring(0,currentUser.getId().indexOf(".")));
         System.out.println("urrl " + con.getUrl());
         NetworkManager.getInstance().addToQueue(con);
         con.addResponseListener(new ActionListener<NetworkEvent>() {
